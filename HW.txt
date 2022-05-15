@@ -1,0 +1,55 @@
+HW1:
+
+1- 65535 adet port vardir.
+2- 1024 alti port'lar dis dunyaya acilirlar (ornek SSH: 22). Bu port'larin genel ismi well-known ports olarak gecer. Yaygin olarak bilinen uygulama veya protokoller tarafindan kullanildiklarindan dolayi bu port'lar genelde yeni uygulamalar tarafindan kullanilmasi icin tercih edilmezler.
+3- 80 port'unu disariya 8585 olarak acmak bir tercihtir. Guvenlik acisindan port'lar acilirken farkli bir port'un acilmasi tercih edilebilir. Bu sayede bir sunucu icin cok yaygin kullanilan port'lar icin tarama yapan bir kotucul yazilim calistirilirsa bu port disariya 8585 olarak acildigi icin direkt olarak bulamaz fakat bu da nmap gibi bir yazilimla kolaylikla atlatilabilir. Dolayisiyla guvenlik acisindan varsayilan port'tan farkli bir port kullanmak iyi bir kullanim seklidir fakat zorunlulugu yoktur ve guvenligi kesin olarak saglamaz.
+4- Nginx load balancer, reverse proxy ve web server olarak kullanilabilen acik kaynak kodlu bir yazilimdir. Ilk kez mail.ru icin Rus bir yazilimci tarafindan yazilmis, ardindan daha fazla gelistirilip gunumuzde en yaygin kullanilan load balancer olmustur.
+5- Dev-Ops temelde development islemlerinin kolaylastirilmasini, otomatiklestirilmesini ve standardize edilmesini de iceren bir disiplindir. Dev-Ops'un gorev tanimi konusunda sektorde tam olarak bir netlik olmasa da yazilimin gelistirilmesi sonrasinda test edilmesi (test muhendisi veya developer tarafindan yazilan test kodlari calistirilarak), canliya alinmasi, versiyonlanmasi, canlida devamliliginin saglanmasi, monitor edilmesi gibi bircok kismini icerir.
+
+
+HW2:
+
+1- Sonarqube sektorde en yaygin kullanilan statik kod analizi urunlerinden biridir. Statik kod analizinin en onemli ozelligi kodu build etmeden ve calistirmadan sadece kod dosyasi cesitli acilardan incelenerek (syntax, format ve belirli kurallara gore) degerlendirilmesidir.
+2- Kubernetes Google tarafindan gelistirilip open-source hale getirilen ve gunumuzde en yaygin kullanilan container orkestrasyon urunudur. Varsayilan olarak scaling, load balancer, health-check gibi canlidaki uygulamalarin high-available olmasini saglayacak cok degerli ozelliklere sahiptir.
+3- Orchestration container'lar ile ilgili islemlerin yonetilmesidir. Orchestration urunleri (Kubernetes, Docker Swarm vb.) temelde uygulamanin kaynak ihtiyaclarina gore uygulamayi scale eder, health-check yaparak gerekli durumlarda uygulamayi tekrardan ayaga kaldirir, uygulamayi birden fazla instance ile calistirip bu instance'larin onunde load balancer ozellikleri sunar.
+4- npm: Not only Package Manager. Node.js'in paket yoneticisidir.
+5- Agile ve scrum dinamik calisma ortamlari icin birer pratiktir. Temelde yapilacak isleri bir backlog'a alip ardindan bu isleri kucuk sprint'lere bolerek surekli iterasyon ile calismayi icerir. Ayrica her iterasyon sonucunda cikarilan urunde bir gelistirme/hata cozme yapilaraktan urunun daha dinamik sekilde gelistirilmesi saglanir.
+
+
+HW3:
+
+1- Ansible IT altyapisi ve uygulamalari icin bir otomasyon dilidir. Redhat tarafindan gelistirilmis ve open-source olmustur. Cross-platform destegi oldugu icin altyapi konfigurasyon yonetiminde cok yaygin olarak kullanilir.
+2- XML: eXtensible Markup Language. Temelde tag'lerin kullanildigi bir isaretleme dilidir. Ozellikle SOAP servislerde yaygin olarak kullanilir.
+3- JSON: JavaScript Object Notation. Gunumuzde ozellikle REST servislerde veri transferlerinde en yaygin kullanilan notasyondur. Temelde key-value seklinde yapisi vardir ve objelerden olusur. Value'lar string, liste veya obje olabilirler.
+4- YAML: Yet Another Markup Language. Gunumuzde ozellikle konfigurasyon dosyalari icin tercih edilen isaretleme dilidir. Docker-compose dosyasi yine YAML formatindadir.
+5- HTTP status code:
+
+1xx: INFO codes
+2xx: Success codes
+3xx: Redirection codes
+4xx: Client error codes
+5xx: Server error codes
+
+
+HW4:
+
+1- 
+2- DNS: Domain Name Server. Domain
+3- GNU: 
+4- Git, Linus Torvalds tarafindan Linux kernel'i gelistirilirken kullanilan ve kernel'in versiyonlanmasi ve bircok kullanici tarafindan birden gelistirilmesi icin gelistirilen teknolojinin adidir. Temelde versiyon kontrol sistemidir.
+5- 
+
+
+HW5
+
+1- Kernel donanima hukmedecek sistem cagrilarini icerir. Shell kernel'e komut verilmesini saglar. Donanimin tum kontrolunu kernel saglar.
+2- Portainer Kubernetes, Docker, Docker Swarm gibi container ve container orchestration urunlerine on yuz sunan bir uygulamadir. Container yonetimini on yuz sunarak kolaylastirir.
+3- Cross-origin
+4- Application server'lar yazilan uygulamalarin serve edebilmesini saglarlar. Tomcat en yaygin kullanilan acik kaynak kodlu application server'lardan biridir. Nginx load balancer ozelliklerini de icerdiginden ve yazilim dilinden bagimsiz oldugu icin yine cok yaygin olarak kullanilan uygulama sunucularindan bir digeridir.
+5-
+
+
+
+HW6:
+
+1- Iyi bir commit mesaji yeterli aciklamayi icermelidir. Ayrica iyi bir commit'te atomic olarak yapilan bir is olmalidir. Birden fazla ilgisiz degisiklik ayni commit'te bulunmamalidir. Commit parcalari kendi icinde anlamli ve butunsel olmalidir.
