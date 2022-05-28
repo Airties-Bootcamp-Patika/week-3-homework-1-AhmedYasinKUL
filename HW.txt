@@ -33,23 +33,49 @@ HW3:
 
 HW4:
 
-1- 
-2- DNS: Domain Name Server. Domain
-3- GNU: 
+1- URI: Uniform Resource Identifier. URL: Uniform Resource Locator. URN: Uniform Resource Name. URI, bir kaynaga dogrudan isaret edip tanimlar. URL ve URN olmak uzere iki turu mevcuttur. URL kaynagin konumunu gosterirken URN ise kaynagi benzersiz bir isim ile tanimlar.
+2- DNS: Domain Name Server. Domain isimlerine karsilik gelen IP adreslerini tutan ve domain isimleri her sorgulandiginda karsilik gelen IP adresini donduren servislere DNS servisleri denir. Dunya uzerine guncel olarak 13 adet root DNS mevcuttur. Domain
+3- GNU: GNU's Not Unix. GNU isletim sistemi veya isletim sisteminin bir parcasi olarak kullanilabilecek bircok ozgur paketi iceren bir yazilim koleksiyonudur. En onemli ozelligi hepsinin tamamen ucretsiz ve lisans olarak acik olmalaridir. Richard Stallman (GNU'yu bulan kisi) bu yazilimlarin herkes tarafindan istenilen sekilde duzenlenmenlerini istedigi icin  GNU Manifesto yayinlamistir. Icerisinde hicbir Unix kodu barindirmaz, ismi buradan gelir.
 4- Git, Linus Torvalds tarafindan Linux kernel'i gelistirilirken kullanilan ve kernel'in versiyonlanmasi ve bircok kullanici tarafindan birden gelistirilmesi icin gelistirilen teknolojinin adidir. Temelde versiyon kontrol sistemidir.
-5- 
+5- CLI: Command Line Interface. GUI: Graphical User Interface. CLI kullanicinin kolayca kullanabilecegi arayuz olmaksizin sadece klavye ile komutlari yazarak bilgisayarin yonetilmesini saglayan arabirimdir. GUI ise kullaniciya klavye disindaki cihazlari da kullanabilmesini saglayaraktan (mouse vb.) grafikler gostererek kullanicinin bilgisayarini veya uygulamalarini yonetmesini saglayan arabirimdir.
 
 
-HW5
+HW5:
 
 1- Kernel donanima hukmedecek sistem cagrilarini icerir. Shell kernel'e komut verilmesini saglar. Donanimin tum kontrolunu kernel saglar.
 2- Portainer Kubernetes, Docker, Docker Swarm gibi container ve container orchestration urunlerine on yuz sunan bir uygulamadir. Container yonetimini on yuz sunarak kolaylastirir.
-3- Cross-origin
+3- Cross-Origin Resource-Sharing: Web sayfalarindaki bazi kaynaklarin farkli alan adlari tarafindan da kullanilabilip kullanilamayacagini duzenleyen kurallardir. Guvenlik acisindan cesitli ataklari onlemek adina onemlidir.
 4- Application server'lar yazilan uygulamalarin serve edebilmesini saglarlar. Tomcat en yaygin kullanilan acik kaynak kodlu application server'lardan biridir. Nginx load balancer ozelliklerini de icerdiginden ve yazilim dilinden bagimsiz oldugu icin yine cok yaygin olarak kullanilan uygulama sunucularindan bir digeridir.
-5-
+5- CVCS: Centralized Version Control System. DVCS: De-centralized Version Control System. Centralized olanda master repository tek bir tanedir. Takimdaki tum developer'lar buradaki repository'den kodu cektikten sonra degisiklikleri yapip server'da bulunan master repository'e push'lar. Kendi local'lerinde repository'nin kendisi bulunmadigi icin server'dan bagimsiz sekilde commit'ler olusturamazlar. Distributed olanda ise her client'in kendi bilgisayarinda da (local'inde) repository'nin hem degisikliklerini (commit'lerini) iceren hem de branch'lerini iceren birer kopyasi bulunur. Bu sayede developer bir kere kendi local'ine repository'i cektikten sonra server'a baglanmadan istedigi gibi degisiklikler yapip commit'ler. En son kodlari server'da bulunan master'a atmak istediginde (push islemi) sadece kod uzerinde yapilan degisiklikler server'daki repository'e gonderilir.
 
 
 
-HW6:
+HW6: (6. sorunun cevabini bilmiyorum)
 
 1- Iyi bir commit mesaji yeterli aciklamayi icermelidir. Ayrica iyi bir commit'te atomic olarak yapilan bir is olmalidir. Birden fazla ilgisiz degisiklik ayni commit'te bulunmamalidir. Commit parcalari kendi icinde anlamli ve butunsel olmalidir.
+2- FIFO: First In First Out. Ilk giren eleman ilk olarak secilir. Ornek olarak queue verilebilir. LIFO: Last In First Out. En son giren eleman ilk olarak cikar. Ornek olarak stack verilebilir.
+3- git merge-rebase: Temelde iki komut da bir branch'i baska bir branch ile birlestirmeye yarar. Aralarindaki temel fark ise bu birlestirme sirasinda commit'lerin nasil birlestirilecegidir. git merge isleminde source branch'teki degisikliklerin hepsi tek bir commit olarak atilip bunun bir merge commit'i oldugu belirtilirken git rebase isleminde ise yapilan degisiklikler sanki destination branch'inde yapilmiscasina source branch'indeki tum commit'lerin destination branch'ine ayri birer commit olarak eklenmesiyle yapilir.
+4- SourceTree Atlassian firmasinin Bitbucket vb. git ortamlarini GUI ile kullanmayi saglayan urunudur.
+5- Interpreter yorumlayici, compiler derleyicidir. Interpreter yazilan kodlari runtime'da satir satir yorumlayip makine koduna cevirerek calisir. Bu yuzden compile edilen kodlara gore daha yavas calisir. Compiler ise yazilan kodlari compile zamaninda makine koduna cevirir. Dolayisiyla onceden makine koduna cevrim oldugu icin optimizasyonlar compile zamaninda yapilabilir ve makine koduna cevrim runtime'da yapilmadigi icin daha hizli calisirlar.
+6- SP Engine: Acikcasi ne demek oldugunu bilmiyorum. Arastirmalarimda da bulamadim.
+7- Servlet: Servlet'ler Java'da web ve uygulama sunucularinda calisan ve client'lardan gelen istekleri karsilayip DB'den (veya uygulamadan) ilgili cevabi donen ara yapilardir. Temelde istek geldikten sonra init(), service() ve destroy() olmak uzere 3 tane method'u kullanarak gelen isteklerle ilgili islemleri yapar.
+
+
+
+HW7:
+
+1- Staging yapilan degisikliklerden track edilecek olanlarin alindigi yerdir. Unstaging ise bunun tam tersidir. Yani yapilan degisiklikler sonrasinda commit'lenmek istenen dosyalar git add komutu ile staging alanina alinir. Commit'lenmek istenmeyen degisiklikler ise unstaging alaninda kalirlar.
+2- Git config ayarlarina baktim, kendim icin ayarladim.
+3- mkdir -p git_code
+4- touch data.txt
+5- git init
+6- git checkout -b linux
+git checkout -b git
+
+
+14- Tamam
+15- Tamam
+
+
+
+
